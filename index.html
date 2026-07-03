@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROBOTARIIS — Écosystème</title>
+<meta name="description" content="Le méta-univers ROBOTARIIS et ses outils : cartes procédurales, radio chiptune, communiqués du C.G.U., ateliers d'image et de son.">
+<style>
+  :root { --c0:#0a0602; --c1:#5c3310; --c2:#e0821e; --c3:#ffc94d; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{background:var(--c0);color:var(--c3);font-family:"DejaVu Sans Mono","Consolas",monospace;
+    line-height:1.5;padding:24px 16px 60px;
+    background-image:radial-gradient(ellipse at 50% 0%,rgba(224,130,30,.10),transparent 60%),
+      linear-gradient(rgba(224,130,30,.04) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(224,130,30,.04) 1px,transparent 1px);
+    background-size:auto,34px 34px,34px 34px}
+  .wrap{max-width:960px;margin:0 auto}
+  header{text-align:center;padding:14px 0 8px;position:relative}
+  /* Bannière officielle (banner.png) si présente ; sinon l'emblème SVG. */
+  .hero{max-width:100%;width:820px;border:1px solid var(--c1);display:none;margin:0 auto 10px;
+    image-rendering:auto}
+  .hero.show{display:block}
+  .eye{width:96px;height:96px;margin:0 auto 14px;display:block}
+  h1{font-size:clamp(30px,8vw,58px);letter-spacing:6px}
+  .tagline{color:var(--c2);font-size:13px;letter-spacing:2px;margin-top:6px}
+  .intro{max-width:640px;margin:22px auto 4px;text-align:center;color:var(--c2);font-size:14px}
+  .crt{position:fixed;inset:0;pointer-events:none;z-index:50;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,.13) 0 1px,transparent 1px 3px)}
+  h2{margin:38px 0 14px;font-size:13px;letter-spacing:3px;color:var(--c2);
+    border-bottom:1px solid var(--c1);padding-bottom:6px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+  .card{border:1px solid var(--c1);padding:14px;display:block;text-decoration:none;color:inherit;
+    transition:border-color .15s,background .15s;position:relative}
+  a.card:hover{border-color:var(--c2);background:rgba(95,174,78,.06)}
+  .card .ico{font-size:22px}
+  .card .name{font-weight:bold;letter-spacing:1px;margin:6px 0 4px}
+  .card .desc{font-size:12px;color:var(--c2)}
+  .card .go{position:absolute;top:12px;right:12px;color:var(--c1);font-size:14px}
+  a.card:hover .go{color:var(--c2)}
+  .card.internal{opacity:.72;border-style:dashed}
+  .card.internal .lock{position:absolute;top:12px;right:12px;font-size:11px;color:var(--c1)}
+  footer{margin-top:48px;text-align:center;font-size:11px;color:var(--c1)}
+  footer a{color:var(--c2);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="crt"></div>
+<div class="wrap">
+  <header>
+    <img class="hero" id="hero" alt="ROBOTARIIS" src="banner.png"
+      onload="this.classList.add('show');document.getElementById('fallbackHead').style.display='none'">
+    <div id="fallbackHead">
+      <svg class="eye" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#5c3310" stroke-width="2"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#e0821e" stroke-width="7"/>
+        <circle cx="50" cy="50" r="17" fill="#ffc94d"/>
+        <rect x="30" y="46" width="40" height="8" fill="#0a0602"/>
+      </svg>
+      <h1>ROBŌTARIIS</h1>
+    </div>
+    <div class="tagline">MÉTA-UNIVERS SF · OUTILS &amp; ARTEFACTS</div>
+  </header>
+
+  <p class="intro">Un régime totalitaire, le C.G.U., règne sur des mondes où humains, synthétiques
+  et Robōtariis coexistent sous la Rectitude. Autour du lore, une constellation d'outils génératifs —
+  cartes, radio, propagande, images, sons. Tout est fait maison.</p>
+
+  <h2>▌ CARTOGRAPHIE &amp; MONDE</h2>
+  <div class="grid">
+    <a class="card" href="https://obareau.github.io/terra-incognita/" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">🗺️</div>
+      <div class="name">Terra-Incognita</div>
+      <div class="desc">Générateur de cartes procédural rétrofuturiste — pixel art, ASCII, ancré sur l'Atlas.</div>
+    </a>
+  </div>
+
+  <h2>▌ SON &amp; RADIO</h2>
+  <div class="grid">
+    <a class="card" href="https://obareau.github.io/terra-incognita/radio/" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">📻</div>
+      <div class="name">Radio Robotariis</div>
+      <div class="desc">Jukebox chiptune génératif — votre onde personnelle, une seule fois dans votre vie.</div>
+    </a>
+    <a class="card" href="https://github.com/obareau/bang" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">🥁</div>
+      <div class="name">BANG!</div>
+      <div class="desc">Séquenceur MIDI algorithmique live — DNA, chaînes de Markov.</div>
+    </a>
+    <a class="card" href="https://github.com/obareau/dim" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">🎛️</div>
+      <div class="name">D.I.M</div>
+      <div class="desc">Dawless Is More — performance musicale non-linéaire.</div>
+    </a>
+    <a class="card" href="https://github.com/obareau/aza-sessions" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">🎙️</div>
+      <div class="name">AZA Sessions</div>
+      <div class="desc">Documentation et performance de sessions musicales.</div>
+    </a>
+  </div>
+
+  <h2>▌ PROPAGANDE &amp; C.G.U.</h2>
+  <div class="grid">
+    <a class="card" href="https://obareau.github.io/Recta/" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">📜</div>
+      <div class="name">Recta</div>
+      <div class="desc">Communiqués de la Rectitude — affiches de propagande générées, prêtes pour les réseaux.</div>
+    </a>
+    <a class="card" href="https://github.com/obareau/calendrier-de-la-rectitude-v1" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">📅</div>
+      <div class="name">Calendrier de la Rectitude</div>
+      <div class="desc">Le calendrier officiel du C.G.U. — 12 mois, saisons, Jours du Silence.</div>
+    </a>
+    <a class="card" href="https://www.facebook.com/1281717051682149" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">⬢</div>
+      <div class="name">Page Robotariis</div>
+      <div class="desc">La Page de l'Oraculum — un communiqué diffusé chaque jour.</div>
+    </a>
+  </div>
+
+  <h2>▌ IMAGE &amp; MACHINE</h2>
+  <div class="grid">
+    <a class="card" href="https://github.com/obareau/mono" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">◧</div>
+      <div class="name">MONO°</div>
+      <div class="desc">Atelier d'image 1-bit noir &amp; blanc industriel — dithering, halftone, glitch.</div>
+    </a>
+    <a class="card" href="https://github.com/obareau/terminal-synth" target="_blank" rel="noopener">
+      <span class="go">▸</span><div class="ico">📺</div>
+      <div class="name">Terminal Synth</div>
+      <div class="desc">Synthé visuel dark/industriel — shaders audio-réactifs, esthétique terminal/ASCII.</div>
+    </a>
+  </div>
+
+  <h2>▌ LORE &amp; ARCHIVES <span style="color:var(--c1);font-weight:normal">— outils internes</span></h2>
+  <div class="grid">
+    <div class="card internal"><span class="lock">🔒 interne</span><div class="ico">🕸️</div>
+      <div class="name">Atlas</div>
+      <div class="desc">Le graphe relationnel du lore — entités, factions, tensions, loyautés. Source de vérité canonique.</div></div>
+    <div class="card internal"><span class="lock">🔒 interne</span><div class="ico">📖</div>
+      <div class="name">Codex Robōtariis</div>
+      <div class="desc">Le vault d'écriture — bible canonique, chronologie de la Rectitude, fiches.</div></div>
+    <div class="card internal"><span class="lock">🔒 interne</span><div class="ico">⏱️</div>
+      <div class="name">Timeline</div>
+      <div class="desc">Chronologie narrative interactive, An 0 → An 20+.</div></div>
+  </div>
+
+  <footer>
+    ROBOTARIIS — méta-univers SF d'Olivier Bareau ·
+    <a href="https://robotariis.com" target="_blank" rel="noopener">robotariis.com</a><br>
+    <span style="opacity:.6">Astuce : appuyez trois fois sur Maj…</span>
+  </footer>
+</div>
+<script src="pirate.js"></script>
+<script>installPirates();</script>
+</body>
+</html>
