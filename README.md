@@ -1,6 +1,6 @@
-# ROBOTARIIS — Hub
+# ROBŌTARIIS — Hub
 
-Portail de l'écosystème **ROBOTARIIS** : le méta-univers SF et sa constellation d'outils
+Portail de l'écosystème **ROBŌTARIIS** : le méta-univers SF et sa constellation d'outils
 génératifs (cartes, radio, propagande, image, son).
 
 **▶ https://obareau.github.io/robotariis-hub/**
@@ -18,8 +18,8 @@ Le module est réutilisable : `<script src="pirate.js"></script>` puis `installP
 
 ## Projets
 
-Publics (liés) : Terra-Incognita, Radio Robotariis, Recta, BANG!, D.I.M, AZA Sessions,
-Calendrier de la Rectitude, MONO°, Terminal Synth, Page Facebook Robotariis.
+Publics (liés) : Terra-Incognita, Radio Robōtariis, Recta, BANG!, D.I.M, AZA Sessions,
+Calendrier de la Rectitude, MONO°, Terminal Synth, Page Facebook Robōtariis.
 Internes (mentionnés) : Atlas, Codex Robōtariis, Timeline.
 
-Fait partie de l'univers **ROBOTARIIS** · robotariis.com
+Fait partie de l'univers **ROBŌTARIIS** · robotariis.com
